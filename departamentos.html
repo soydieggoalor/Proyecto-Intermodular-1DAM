@@ -80,5 +80,21 @@
     </div>
 </main>
 
+<script>
+    const btn = document.getElementById("hamburger");
+    const nav = document.querySelector(".links");
+    btn.addEventListener("click", function () {
+        nav.classList.toggle("open");
+        btn.classList.toggle("open");
+    });
+
+    nav.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+            nav.classList.remove("open");
+            btn.classList.remove("open");
+        });
+    });
+</script>
+
 </body>
 </html>
