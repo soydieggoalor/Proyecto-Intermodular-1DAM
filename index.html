@@ -15,10 +15,10 @@
   </div>
   <div class="links">
     <a href="index.html" class="active">Inicio</a>
-    <a href="/departamentos.html">Departamentos</a>
-    <a href="/empleados.html">Empleados</a>
-    <a href="/dispositivos.html">Dispositivos</a>
-    <a href="/incidencias.html">Incidencias</a>
+    <a href="departamentos.html">Departamentos</a>
+    <a href="empleados.html">Empleados</a>
+    <a href="dispositivos.html">Dispositivos</a>
+    <a href="incidencias.html">Incidencias</a>
   </div>
 </nav>
 
@@ -30,7 +30,7 @@
     técnico en una única plataforma unificada.
   </p>
   <div class="hero-buttons">
-    <a href="/departamentos.html" class="btn-main">Acceder al Sistema</a>
+    <a href="departamentos.html" class="btn-main">Acceder al Sistema</a>
   </div>
 </header>
 
@@ -66,6 +66,21 @@
     </div>
   </div>
 </section>
+
+<script>
+  const btn = document.getElementById("hamburger");
+  const nav = document.querySelector(".links");
+  btn.addEventListener("click", function () {
+    nav.classList.toggle("open");
+    btn.classList.toggle("open");
+  });
+
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      nav.classList.remove("open");
+      btn.classList.remove("open");
+    });
+  });
 
 </body>
 </html>
