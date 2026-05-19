@@ -81,8 +81,111 @@
             </div>
             <button type="button" class="btn-main">Registrar Empleado</button>
         </form>
-    </div>
+    </div><!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RedCode — Empleados</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <nav class="navbar">
+        <div class="logo-box">
+            <span class="nav-code-icon">&lt;/&gt;</span>
+            <div class="logo-text">Red<span>Code</span></div>
+        </div>
+        <div class="links">
+            <a href="index.html">Inicio</a>
+            <a href="departamentos.html">Departamentos</a>
+            <a href="empleados.html" class="active">Empleados</a>
+            <a href="dispositivos.html">Dispositivos</a>
+            <a href="incidencias.html">Incidencias</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2 class="page-title">
+            <img src="redcode_icon_usuario.svg" alt="Icono Usuarios" class="title-icon">
+            Control de Personal
+        </h2>
+        <p class="subtitle">Fichas de empleados, roles asignados y contacto corporativo.</p>
+
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>ID Empleado</th>
+                <th>DNI</th>
+                <th>Nombre Completo</th>
+                <th>Rol / Puesto</th>
+                <th>Email</th>
+                <th>Departamento</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>EMP001</td>
+                <td>12345678A</td>
+                <td>Carlos Mendoza Pérez</td>
+                <td>Director General</td>
+                <td>carlos@redcode.com</td>
+                <td>DIR01</td>
+            </tr>
+            <tr>
+                <td>EMP002</td>
+                <td>87654321B</td>
+                <td>Ana Gómez Corts</td>
+                <td>Administrador de Sistemas</td>
+                <td>ana.gomez@redcode.com</td>
+                <td>SIS02</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="form-box">
+            <h3>Dar de Alta Empleado</h3>
+            <form>
+                <div class="form-group">
+                    <label>DNI:</label>
+                    <input type="text" placeholder="Ej. 11223344E">
+                </div>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" placeholder="Ej. Juan">
+                </div>
+                <div class="form-group">
+                    <label>Primer Apellido:</label>
+                    <input type="text" placeholder="Ej. López">
+                </div>
+                <div class="form-group">
+                    <label>Puesto / Rol:</label>
+                    <input type="text" placeholder="Ej. Desarrollador Junior">
+                </div>
+                <button type="button" class="btn-main">Registrar Empleado</button>
+            </form>
+        </div>
+    </main>
+
+    </body>
+    </html>
 </main>
+
+<script>
+    const btn = document.getElementById("hamburger");
+    const nav = document.querySelector(".links");
+    btn.addEventListener("click", function () {
+        nav.classList.toggle("open");
+        btn.classList.toggle("open");
+    });
+    
+    nav.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+            nav.classList.remove("open");
+            btn.classList.remove("open");
+        });
+    });
+</script>
 
 </body>
 </html>
