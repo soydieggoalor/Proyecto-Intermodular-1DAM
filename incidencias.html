@@ -13,7 +13,10 @@
     <span class="nav-code-icon">&lt;/&gt;</span>
     <div class="logo-text">Red<span>Code</span></div>
   </div>
-  <div class="links">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="links">
     <a href="index.html">Inicio</a>
     <a href="departamentos.html">Departamentos</a>
     <a href="empleados.html">Empleados</a>
@@ -72,7 +75,7 @@
     nav.classList.toggle("open");
     btn.classList.toggle("open");
   });
-  
+ 
   nav.querySelectorAll("a").forEach(function (a) {
     a.addEventListener("click", function () {
       nav.classList.remove("open");
@@ -80,6 +83,5 @@
     });
   });
 </script>
-
 </body>
 </html>
