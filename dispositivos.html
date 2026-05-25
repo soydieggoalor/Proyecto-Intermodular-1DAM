@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedCode — Dispositivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo-box">
+        <span class="nav-code-icon">&lt;/&gt;</span>
+        <div class="logo-text">Red<span>Code</span></div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="links">
+        <a href="index.html">Inicio</a>
+        <a href="departamentos.html">Departamentos</a>
+        <a href="empleados.html">Empleados</a>
+        <a href="dispositivos.html" class="active">Dispositivos</a>
+        <a href="incidencias.html">Incidencias</a>
+    </div>
+</nav>
+
+<main class="container">
+    <h2 class="page-title">
+        <img src="redcode_icon_dev.svg" alt="Icono Dispositivos" class="title-icon">
+        Inventario de Dispositivos
+    </h2>
+    <p class="subtitle">Control de hardware corporativo, direccionamiento IP y asignaciones.</p>
+
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Tipo</th>
+            <th>S.O.</th>
+            <th>Dirección IP</th>
+            <th>MAC Address</th>
+            <th>Empleado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>DISP-01</td>
+            <td>Portátil corporativo</td>
+            <td>Windows 11</td>
+            <td>192.168.1.45</td>
+            <td>00:1A:3B:4C:5D:6E</td>
+            <td>EMP002</td>
+        </tr>
+        <tr>
+            <td>DISP-02</td>
+            <td>Servidor Dedicado</td>
+            <td>Ubuntu Server</td>
+            <td>10.0.0.250</td>
+            <td>00:80:41:AE:FD:7B</td>
+            <td>—</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="form-box">
+        <h3>Registrar Dispositivo en Red</h3>
+        <form>
+            <div class="form-group">
+                <label>Código Dispositivo:</label>
+                <input type="text" placeholder="Ej. DISP-03">
+            </div>
+            <div class="form-group">
+                <label>Tipo de Dispositivo:</label>
+                <input type="text" placeholder="Ej. Servidor, Portátil...">
+            </div>
+            <div class="form-group">
+                <label>Dirección IP Asignada:</label>
+                <input type="text" placeholder="Ej. 192.168.1.100">
+            </div>
+            <button type="button" class="btn-main">Vincular Equipo</button>
+        </form>
+    </div>
+</main>
+
+<script>
+    const btn = document.getElementById("hamburger");
+    const nav = document.querySelector(".links");
+    btn.addEventListener("click", function () {
+        nav.classList.toggle("open");
+        btn.classList.toggle("open");
+    });
+
+    nav.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+            nav.classList.remove("open");
+            btn.classList.remove("open");
+        });
+    });
+</script>
+</body>
+</html>

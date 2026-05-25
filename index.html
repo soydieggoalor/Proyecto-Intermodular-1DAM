@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedCode — Plataforma de Gestión Corporativa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo-box">
+    <span class="nav-code-icon">&lt;/&gt;</span>
+    <div class="logo-text">Red<span>Code</span></div>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="links">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="departamentos.html">Departamentos</a>
+    <a href="empleados.html">Empleados</a>
+    <a href="dispositivos.html">Dispositivos</a>
+    <a href="incidencias.html">Incidencias</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Soluciones Integrales de <span>Gestión TI</span></h1>
+  <p class="hero-description">
+    En <strong>RedCode</strong> nos encargamos del control operativo y tecnológico de organizaciones modernas.
+    Centralizamos la administración de recursos humanos, el inventario de infraestructura de red y el soporte
+    técnico en una única plataforma unificada.
+  </p>
+  <div class="hero-buttons">
+    <a href="departamentos.html" class="btn-main">Acceder al Sistema</a>
+  </div>
+</header>
+
+<section class="container general-info">
+  <div class="services-title">
+    <h2>¿De qué nos encargamos?</h2>
+    <p class="subtitle">Nuestras áreas principales de soporte y control interno</p>
+  </div>
+
+  <div class="grid-services">
+    <div class="service-card">
+      <div class="service-icon">
+        <img src="redcode_icon_stats.svg" alt="Icono Control Organizativo">
+      </div>
+      <h3>Control Organizativo</h3>
+      <p>Supervisión de departamentos corporativos, auditoría de presupuestos anuales y asignación estratégica de directores de área.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <img src="redcode_icon_dev.svg" alt="Icono Activos TI">
+      </div>
+      <h3>Inventario y Activos TI</h3>
+      <p>Monitorización global de dispositivos informáticos, gestión de direccionamiento IP, registro de direcciones MAC y asignación de equipos al personal.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <img src="redcode_icon_incidencias.svg" alt="Icono Soporte">
+      </div>
+      <h3>Soporte e Incidencias</h3>
+      <p>Ciclo de vida completo de fallos técnicos. Reporte, asignación de responsables y seguimiento de estados para garantizar la continuidad del negocio.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const btn = document.getElementById("hamburger");
+  const nav = document.querySelector(".links");
+  btn.addEventListener("click", function () {
+    nav.classList.toggle("open");
+    btn.classList.toggle("open");
+  });
+
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      nav.classList.remove("open");
+      btn.classList.remove("open");
+    });
+  });
+</script>
+</body>
+</html>
