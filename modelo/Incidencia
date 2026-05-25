@@ -1,0 +1,57 @@
+package model;
+
+import java.time.LocalDate;
+
+public class Incidencia {
+    private String codIncidencia;
+    private String observaciones;
+    private String estado;
+    private LocalDate fechaAlta;
+    private LocalDate fechaCierre;
+    private String codDispositivo;
+    private String codResponsable;
+    private String codCreador;
+
+    public Incidencia(String codIncidencia, String observaciones, String estado,
+                      LocalDate fechaAlta, LocalDate fechaCierre, String codDispositivo,
+                      String codResponsable, String codCreador) {
+        this.codIncidencia = codIncidencia;
+        this.observaciones = observaciones;
+        this.estado = estado;
+        this.fechaAlta = fechaAlta;
+        this.fechaCierre = fechaCierre;
+        this.codDispositivo = codDispositivo;
+        this.codResponsable = codResponsable;
+        this.codCreador = codCreador;
+    }
+
+    public String getCodIncidencia() { return codIncidencia; }
+    public void setCodIncidencia(String codIncidencia) { this.codIncidencia = codIncidencia; }
+
+    public String getObservaciones() { return observaciones; }
+    public void setObservaciones(String observaciones) { this.observaciones = observaciones; }
+
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
+
+    public LocalDate getFechaAlta() { return fechaAlta; }
+    public void setFechaAlta(LocalDate fechaAlta) { this.fechaAlta = fechaAlta; }
+
+    public LocalDate getFechaCierre() { return fechaCierre; }
+    public void setFechaCierre(LocalDate fechaCierre) { this.fechaCierre = fechaCierre; }
+
+    public String getCodDispositivo() { return codDispositivo; }
+    public void setCodDispositivo(String codDispositivo) { this.codDispositivo = codDispositivo; }
+
+    public String getCodResponsable() { return codResponsable; }
+    public void setCodResponsable(String codResponsable) { this.codResponsable = codResponsable; }
+
+    public String getCodCreador() { return codCreador; }
+    public void setCodCreador(String codCreador) { this.codCreador = codCreador; }
+
+    @Override
+    public String toString() {
+        return "[" + codIncidencia + "] " + estado + " | Dispositivo: " + codDispositivo +
+                " | Responsable: " + codResponsable + " | Alta: " + fechaAlta;
+    }
+}
